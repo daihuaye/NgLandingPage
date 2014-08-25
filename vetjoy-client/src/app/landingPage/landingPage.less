@@ -1,13 +1,12 @@
 .nl-landing-page-view {
   @bg-color: rgba(72, 72, 72, 0.6);
-  font-family: 'Open Sans';
   height: 700px;
   line-height: 1.2;
   div, img, button {
     vertical-align: top;
   }
   .container {
-    width: 833px;
+    width: 792px;
     padding: 0px;
   }
   .nl-vet-joy-logo {
@@ -32,14 +31,12 @@
     background-color: @bg-color;
   }
   .nl-slogan {
-    font-size: 36px;
-    font-weight: bold;
+    .font-style(@font-bold, 36px);
     display: block;
   }
   .nl-visit-reason {
     display: block;
-    font-size: 20px;
-    color: rgb(254, 254, 254);
+    .font-style(@font-regular, 20px, rgb(254, 254, 254));
   }
   .nl-reason-content {
     padding-top: 28px;
@@ -58,10 +55,8 @@
   .nl-lp-reason-li-span {
     width: 320px;
     margin-left: 20px;
-    font-size: 16px;
-    color: rgb(251, 251, 251);
+    .font-style(@font-light, 16px, rgb(251, 251, 251));
     display: inline-block;
-    font-weight: lighter;
   }
   .nl-register-name-form {
     width: 450px;
@@ -73,15 +68,13 @@
     padding-left: 24px;
     background-color: @bg-color;
     span {
-      font-weight: 600;
-      font-size: 20px;
+      .font-style(@font-semibold, 20px);
       display: block;
       margin-bottom: 10px;
     }
     .nl-form-error-msg {
       background-color: rgba(255, 255, 255, 0.45);
-      font-size: 14px;
-      font-weight: 100;
+      .font-style(@font-light, 14px);
       .size(210px, 22px);
       padding-top: 3px;
       color: black;
@@ -91,10 +84,9 @@
   }
   .nl-email {
     .size(210px, 28px);
-    color: black;
     border: 1px solid #eaeaea;
     outline: none;
-    font-size: 14px;
+    .font-style(@font-regular, 14px, black);
     padding-left: 12px;
     padding-right: 10px;
     margin-left: 24px;
@@ -114,31 +106,27 @@
   }
   .nl-invited-list {
     width: 325px;
-    height: 180px;
-    margin-left: 58px;
+    min-height: 180px;
+    margin-left: 17px;
     display: inline-block;
     background-color: rgba(234, 234, 234, .36);
     padding-top: 14px;
     padding-left: 21px;
     margin-top: 136px;
-    overflow-y: scroll;
     overflow-x: hidden;
   }
   .nl-invited-title {
     display: block;
-    font-size: 20px;
+    .font-style(@font-regular, 20px, rgb(254, 254, 254));
     margin-bottom: 18px;
-    color: rgb(254, 254, 254);
   }
   .nl-invited-emails {
     display: block;
-    color: rgb(253, 253, 253);
-    font-size: 14px;
+    .font-style(@font-regular, 14px, rgb(253, 253, 253));
     margin-bottom: 4px;
   }
   .nl-success-register {
-    font-size: 20px;
-    font-weight: 600;
     min-height: 100px;
+    .font-style(@font-semibold, 20px);
   }
 }
