@@ -59,7 +59,7 @@ function (
     var submitted = false;
 
     $scope.isSuccess = false;
-    $scope.emails = corp.child('emails').val();
+    $scope.emails = corp.child('emails').val() || {};
     $scope.company = corp.child('displayName').val();
 
     $scope.request = {
