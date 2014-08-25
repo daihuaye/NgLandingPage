@@ -12,7 +12,7 @@ angular.module('vetjoy.landingPage', [
 .config(['$stateProvider', function($stateProvider) {
     $stateProvider
     .state('landingPage', {
-        url: '/:company',
+        url: '/:corp',
         abstract: true,
         views: {
             'main': {
@@ -27,6 +27,15 @@ angular.module('vetjoy.landingPage', [
                 controller: 'LandingPageCtrl',
                 templateUrl: 'landingPage/landingPage.tpl.html'
             }
+        },
+        resolve: {
+            corp: ['VetJoy', '$stateParams', '$state', function (VetJoy, $stateParams, $state) {
+                return VetJoy
+                        .requestForCorp($stateParams.corp)
+                        .then(null, function () {
+                            $state.go('landingPage.404', $stateParams);
+                        });
+            }]
         }
     })
     .state('landingPage.404', {
@@ -39,48 +48,19 @@ angular.module('vetjoy.landingPage', [
     '$state',
     'Util',
     'VetJoy',
+    'corp',
 function (
     $scope,
     $state,
     Util,
-    VetJoy
+    VetJoy,
+    corp
 ){
     var submitted = false;
 
     $scope.isSuccess = false;
-    $scope.emails = [];
-    $scope.company = Util.getCompanyName($state.params.company);
-
-    switch($scope.company.toLowerCase()) {
-        case 'splunk': 
-        case 'zoosk':
-        case 'airbnb':
-        case 'google':
-        case 'amazon':
-        case 'autodesk':
-        case 'clif-bar':
-        case 'eventbrite':
-        case 'facebook':
-        case 'getaround':
-        case 'heroku':
-        case 'indiegogo':
-        case 'kiva':
-        case 'practice-fusion':
-        case 'salesforce':
-        case 'trulia':
-        case 'whistle':
-        case 'workday':
-        case 'yelp':
-        case 'advent-software':
-        case 'huffington post':
-        case 'lyft':
-        case 'palantir':
-        case 'pinterest':
-            break;
-        default: 
-            $state.go('landingPage.404');
-            break;
-    }
+    $scope.emails = corp.child('emails').val();
+    $scope.company = corp.child('displayName').val();
 
     $scope.request = {
         email: ''
@@ -90,7 +70,7 @@ function (
     };
 
     function checkIsSameEmail() {
-        return _.find(emails, function (e) {
+        return _.find($scope.emails, function (e) {
             return e === $scope.request.email;
         });
     }
@@ -108,6 +88,10 @@ function (
         }
     };
 
+    $scope.hasEmails = function hasEmails() {
+        return _.size($scope.emails) > 0;
+    };
+
     $scope.requestSubmit = function requestSubmit() {
         submitted = true;
         if (checkIsSameEmail()) {
@@ -116,10 +100,10 @@ function (
         if ($scope.requestForm.$valid && 
             !$scope.customErrors.isSameEmail) {
             return VetJoy
-                .registerVetJoy($scope.company, $scope.request)
+                .registerVetJoy(corp, $scope.request.email)
                 .then(function (response) {
                     $scope.isSuccess = true;
-                    $scope.emails.push($scope.request.email);
+                    $scope.emails[$scope.request.email] = $scope.request.email;
                 }, function (response) {
                     console.log(response);
                 });

@@ -69,9 +69,9 @@
                 Nice job&#33; You&#8217;ll be first to know when we&#8217;ll visit {{company}}&#46;
             </div>
         </div
-        ><div class="nl-invited-list" ng-show="emails.length > 0">
+        ><div class="nl-invited-list" ng-show="hasEmails()">
             <span class="nl-invited-title">Who&#8217;s invited</span>
-            <span data-ng-repeat="email in emails track by $index"
+            <span data-ng-repeat="(key, email) in emails track by $index"
                     class="nl-invited-emails">
                 {{email}}
             </span>
