@@ -7,7 +7,8 @@ angular.module('vetjoy.landingPage', [
     'ngMessages',
     'ngAnimate',
     'resource.VetJoy',
-    'service.Util'
+    'service.Util',
+    'directive.diFocusMe'
 ])
 .config(['$stateProvider', function($stateProvider) {
     $stateProvider
