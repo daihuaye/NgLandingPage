@@ -1,7 +1,15 @@
 .nl-landing-page-view {
   @bg-color: rgba(72, 72, 72, 0.6);
-  height: 700px;
   line-height: 1.2;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 792px;
+  min-height: 700px;
+  background: url('images/extendedLandingPageImage.jpg') no-repeat right bottom fixed;
+  .background-size(cover);
+
   div, img, button {
     vertical-align: top;
   }
@@ -12,15 +20,6 @@
   .nl-vet-joy-logo {
     margin-left: 7px;
     padding: 17px 17px;
-  }
-  .nl-lp-background-image {
-    width: 100%;
-    min-width: 1280px;
-    overflow: hidden;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: -1;
   }
   .nl-sidebar {
     display: inline-block;
