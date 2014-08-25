@@ -1,0 +1,80 @@
+<div class="nl-landing-page-view">
+    <img src="assets/images/landingPageImage.jpg" 
+        alt="home" 
+        class="nl-lp-background-image">
+    <img src="assets/images/vetjoy-small.png" 
+        alt="logo"
+        class="nl-vet-joy-logo btn">
+    <div class="container">
+        <div class="nl-sidebar">
+            <div class="nl-lp-perks">
+                <span class="nl-slogan">We&#8217;re the doctors</span>
+                <span class="nl-slogan">{{company}} dogs need&#46;</span>
+                <span class="nl-visit-reason nl-reason-content">
+                    Our vets&#44; ranked top 15&#37; in the U&#46;S&#46;&#44;
+                </span>
+                <span class="nl-visit-reason">
+                    visit you and your dog at {{company}}&#46;
+                </span>
+                <ul class="nl-list-detail-reason">
+                    <li>
+                        <img src="assets/images/dot.png", alt="landing page" class="nl-dot-image"
+                        ><span class="nl-lp-reason-li-span">
+                            Your dog gets a thorough wellness checkup (plus vaccines) for 20 minutes.
+                        </span>
+                    </li
+                    ><li>
+                        <img src="assets/images/dot.png", alt="landing page" class="nl-dot-image"
+                        ><span class="nl-lp-reason-li-span">
+                            Enjoy a complimentary vet follow-up call. Always happy to help 24/7.
+                        </span>
+                    </li
+                    ><li>
+                        <img src="assets/images/dot.png", alt="landing page" class="nl-dot-image"
+                        ><span class="nl-lp-reason-li-span">
+                            No obligations. Cancel anytime.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <form class="nl-register-name-form"
+                    data-ng-hide="isSuccess"
+                    novalidate
+                    name="requestForm"
+                    data-ng-submit="requestSubmit()">
+                <span>Sign up for an invite to see a vet at {{company}}</span>
+                <input type="email" 
+                        name="email"
+                        data-ng-model="request.email"
+                        class="nl-email"
+                        placeholder="Enter your work email"
+                        data-ng-keyup="enterKeyToSubimt($event)"
+                        required
+                ><button type="submit"
+                        class="btn nl-submit"></button>
+                <div ng-messages="requestForm.email.$error"
+                    ng-messages-include="assets/error-messages.html"
+                    data-ng-show="interacted(requestForm.email)">
+                </div>
+                <div ng-messages="customErrors"
+                    data-ng-show="interacted(requestForm.email)">
+                    <div ng-message="isSameEmail"
+                        class="nl-form-error-msg">
+                        The email is registered.
+                    </div>
+                </div>
+            </form>
+            <div class="nl-register-name-form nl-success-register"
+                data-ng-show="isSuccess">
+                Nice job&#33; You&#8217;ll be first to know when we&#8217;ll visit {{company}}&#46;
+            </div>
+        </div
+        ><div class="nl-invited-list" ng-show="emails.length > 0">
+            <span class="nl-invited-title">Who&#8217;s invited</span>
+            <span data-ng-repeat="email in emails track by $index"
+                    class="nl-invited-emails">
+                {{email}}
+            </span>
+        </div>
+    </div>
+</div>

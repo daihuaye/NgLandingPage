@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="vetjoy" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <!-- social media tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@vetjoy">
+    <meta name="twitter:title" content="vetjoy">
+    <meta name="twitter:description" content="Find a Veterinarian in the SF Bay area and book an appointment online, free. Read trusted reviews by pet owners, compare checkup prices and book available hours.">
+    <meta name="twitter:creator" content="@vetjoy">
+    <meta property="og:title" content="vetjoy" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://bit.ly/vetjoy" />
+    <meta property="og:description" content="Find a Veterinarian in the SF Bay area and book an appointment online, free. Read trusted reviews by pet owners, compare checkup prices and book available hours.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+  </head>
+  <body>
+  
+    <div ui-view="main" autoscroll='true'></div>
+    
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+    <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+  </body>
+</html>
