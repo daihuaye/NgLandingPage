@@ -2,16 +2,24 @@ angular.module( 'vetjoy', [
     'templates-app',
     'templates-common',
     'ui.router',
+    'angulartics',
+    'angulartics.google.analytics',
     'vetjoy.home',
     'vetjoy.landingPage'
 ])
 
 .config([
     '$urlRouterProvider',
+    '$analyticsProvider',
+    '$locationProvider',
 function myAppConfig (
-    $urlRouterProvider
+    $urlRouterProvider,
+    $analyticsProvider,
+    $locationProvider
 ){
     $urlRouterProvider.otherwise('/home');
+    $analyticsProvider.firstPageview(false);
+    $analyticsProvider.withAutoBase(false);
 }])
 
 .run(function run(){

@@ -69,7 +69,9 @@ module.exports = {
         'vendor/angular-ui-utils/modules/route/route.js',
         'vendor/underscore/underscore.js',
         'vendor/angular-animate/angular-animate.min.js',
-        'vendor/angular-messages/angular-messages.min.js'
+        'vendor/angular-messages/angular-messages.min.js',
+        'vendor/angulartics/dist/angulartics.min.js',
+        'vendor/angulartics/dist/angulartics-ga.min.js'
     ],
     css: [
     ],
