@@ -72,7 +72,7 @@ function (
         case 'workday':
         case 'yelp':
         case 'advent-software':
-        case 'huffington-post':
+        case 'huffington post':
         case 'lyft':
         case 'palantir':
         case 'pinterest':
