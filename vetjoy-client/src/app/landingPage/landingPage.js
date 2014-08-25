@@ -61,6 +61,7 @@ function (
 
     $scope.isSuccess = false;
     $scope.emails = corp.child('emails').val() || {};
+    $scope.header = corp.child('header').val();
     $scope.company = corp.child('displayName').val();
 
     $scope.request = {
