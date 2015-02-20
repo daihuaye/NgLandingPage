@@ -5,6 +5,6 @@
 */
 angular.module('resource.Base', [])
 .factory('Base', [function () {
-    var firebaseDB = new Firebase('https://vetjoy.firebaseio.com/');
+    var firebaseDB = new Firebase('');
     return firebaseDB;
 }]);
