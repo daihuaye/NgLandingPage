@@ -10,7 +10,11 @@
  * project should be imported as the rest are just wasting space.
  */
 
+
+@import 'reset.less';
 @import '../../vendor/bootstrap/less/bootstrap.less';
+@import '../../vendor/lesshat/build/lesshat.less';
+
 
 /**
  * This is our main variables file. We must include it last so we can overwrite any variable
@@ -18,17 +22,29 @@
  */
 
 @import 'variables.less';
-
+@import 'mixins.less';
 
 /**
  * Typography
  */
+@font-face {
+  font-family: 'opensans-light';
+  src: url('../assets/fonts/OpenSans-Light.ttf');
+}
 
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff) format('woff');
+  font-family: 'opensans-regular';
+  src: url('../assets/fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'opensans-semibold';
+  src: url('../assets/fonts/OpenSans-Semibold.ttf');
+}
+
+@font-face {
+  font-family: 'opensans-bold';
+  src: url('../assets/fonts/OpenSans-Bold.ttf');
 }
 
 

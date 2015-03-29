@@ -13,7 +13,7 @@ angular.module('vetjoy.landingPage', [
 .config(['$stateProvider', function($stateProvider) {
     $stateProvider
     .state('landingPage', {
-        url: '/:corp',
+        url: '/',
         abstract: true,
         views: {
             'main': {
@@ -22,7 +22,7 @@ angular.module('vetjoy.landingPage', [
         }
     })
     .state('landingPage.company', {
-        url: '',
+        url: '/:corp',
         views: {
             '': {
                 controller: 'LandingPageCtrl',

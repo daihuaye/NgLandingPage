@@ -17,9 +17,9 @@
         // The top section of a controller should be lean and make it easy to see the "signature" of the controller
         //  at a glance.  All function definitions should be contained lower down.
         var model = this;
-        model.someVar = 'blue';
-        model.someList = ['one', 'two', 'three'];
-        model.someFunctionUsedByTheHomePage = someFunctionUsedByTheHomePage;
+        model.emails = ['one', 'two', 'three'];
+        model.header = 'blue';
+        model.company = 'Company';
 
         init();
 

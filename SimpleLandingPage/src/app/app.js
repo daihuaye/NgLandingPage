@@ -12,7 +12,6 @@
 
 }(angular.module("SimpleLandingPage", [
     'SimpleLandingPage.home',
-    'SimpleLandingPage.about',
     'templates-app',
     'templates-common',
     'ui.router.state',

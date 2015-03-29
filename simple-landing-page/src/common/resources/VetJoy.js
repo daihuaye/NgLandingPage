@@ -28,7 +28,7 @@ function (
             }, function (err) {
                 fbPromise.reject(err);
             });
-            
+
             return fbPromise.promise;
         },
         registerVetJoy: function registerVetJoy(corpSnapshot, email) {

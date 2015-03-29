@@ -4,7 +4,6 @@ angular.module( 'vetjoy', [
     'ui.router',
     'angulartics',
     'angulartics.google.analytics',
-    'vetjoy.home',
     'vetjoy.landingPage'
 ])
 
@@ -17,7 +16,7 @@ function myAppConfig (
     $analyticsProvider,
     $locationProvider
 ){
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/');
     $analyticsProvider.firstPageview(false);
     $analyticsProvider.withAutoBase(false);
 }])
