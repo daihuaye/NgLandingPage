@@ -37,7 +37,7 @@
             });
 
             return fbPromise.promise;
-        },
+        }
 
     });
 

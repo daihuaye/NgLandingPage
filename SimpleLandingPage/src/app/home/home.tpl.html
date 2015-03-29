@@ -5,12 +5,12 @@
     <div class="container">
         <div class="nl-sidebar">
             <div class="nl-lp-perks">
-                <span class="nl-slogan">{{header}}</span>
+                <span class="nl-slogan">{{model.header}}</span>
                 <span class="nl-visit-reason nl-reason-content">
                     Our vets&#44; ranked top 15&#37; in the US&#44;
                 </span>
                 <span class="nl-visit-reason">
-                    visit you and your dog at {{company}}&#46;
+                    visit you and your dog at {{model.company}}&#46;
                 </span>
                 <ul class="nl-list-detail-reason">
                     <li>
@@ -34,17 +34,16 @@
                 </ul>
             </div>
             <form class="nl-register-name-form"
-                    data-ng-hide="isSuccess"
+                    data-ng-hide="model.isSuccess"
                     novalidate
                     name="requestForm"
-                    data-ng-submit="requestSubmit()">
-                <span>Sign up for an invite to see a vet at {{company}}</span>
-                <input type="email" 
+                    data-ng-submit="model.requestSubmit()">
+                <span>Sign up for an invite to see a vet at {{model.company}}</span>
+                <input type="email"
                         name="email"
-                        data-ng-model="request.email"
+                        data-ng-model="module.email"
                         class="nl-email"
                         placeholder="Enter your work email"
-                        data-ng-keyup="enterKeyToSubimt($event)"
                         focus-me="true"
                         di-focus-me
                         required
@@ -52,10 +51,10 @@
                         class="btn nl-submit"></button>
                 <div ng-messages="requestForm.email.$error"
                     ng-messages-include="assets/error-messages.html"
-                    data-ng-show="interacted(requestForm.email)">
+                    data-ng-show="model.interacted(requestForm.email)">
                 </div>
-                <div ng-messages="customErrors"
-                    data-ng-show="interacted(requestForm.email)">
+                <div ng-messages="model.customErrors"
+                    data-ng-show="model.interacted(requestForm.email)">
                     <div ng-message="isSameEmail"
                         class="nl-form-error-msg">
                         The email is registered.
@@ -63,13 +62,13 @@
                 </div>
             </form>
             <div class="nl-register-name-form nl-success-register"
-                data-ng-show="isSuccess">
+                data-ng-show="model.isSuccess">
                 Nice job&#33; You&#8217;ll be first to know when we&#8217;ll visit {{company}}&#46;
             </div>
         </div
-        ><div class="nl-invited-list" ng-show="hasEmails()">
+        ><div class="nl-invited-list" ng-show="model.hasEmails()">
             <span class="nl-invited-title">Who&#8217;s invited</span>
-            <span data-ng-repeat="(key, email) in emails track by $index"
+            <span data-ng-repeat="(key, email) in model.emails track by $index"
                     class="nl-invited-emails">
                 {{email}}
             </span>
