@@ -82,7 +82,8 @@ module.exports = function(grunt) {
                 'vendor/angular-ui-router/release/angular-ui-router.js',
                 'vendor/angular-ui-utils/modules/route/route.js',
                 'vendor/angular-messages/angular-messages.min.js',
-                'vendor/lodash/lodash.min.js'
+                'vendor/lodash/lodash.min.js',
+                'vendor/firebase/firebase.js'
             ],
             css: [
             ],
