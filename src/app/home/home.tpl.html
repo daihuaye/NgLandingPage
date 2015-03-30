@@ -1,7 +1,5 @@
 <div class="nl-landing-page-view">
-    <img src="assets/images/vetjoy-small.png" 
-        alt="logo"
-        class="nl-vet-joy-logo btn">
+    <i class="fa fa-connectdevelop fa-5 project-icon"></i>
     <div class="container">
         <div class="nl-sidebar">
             <div class="nl-lp-perks">
@@ -41,9 +39,10 @@
                 <span>Sign up for an invite to see a vet at {{model.company}}</span>
                 <input type="email"
                         name="email"
-                        data-ng-model="module.email"
+                        data-ng-model="model.email"
                         class="nl-email"
                         placeholder="Enter your work email"
+                        data-ng-keydown="model.clearError()"
                         focus-me="true"
                         di-focus-me
                         required

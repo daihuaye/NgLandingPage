@@ -7,7 +7,6 @@
     app.run(function () {});
 
     app.controller('AppController', function ($scope) {
-
     });
 
 }(angular.module("SimpleLandingPage", [
@@ -15,5 +14,5 @@
     'templates-app',
     'templates-common',
     'ui.router.state',
-    'ui.router',
+    'ui.router'
 ])));

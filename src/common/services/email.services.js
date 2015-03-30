@@ -1,7 +1,7 @@
 (function(module) {
 
-    module.factory('EmailService', function () {
-        var firebaseDB = new Firebase('');
+    module.factory('EmailService', function ($q) {
+        var firebaseDB = new Firebase('https://simplelandingpage.firebaseio.com/');
 
         return {
             register: register,
@@ -24,7 +24,7 @@
         }
 
         function registerForProject(project) {
-            var fbProject = firebaseDB.child('project').child(project),
+            var fbProject = firebaseDB.child('projects').child(project),
                 fbPromise = $q.defer();
             fbProject.once('value', function (snapshot) {
                 if (snapshot.val()) {

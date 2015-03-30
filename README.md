@@ -1,13 +1,7 @@
-##Simple Landing Page
+# Simple landing page
 
-##Quick Start
-Install Node.js and then:
+A simplified version of the ngBoilerplate angular project template.
 
-```shell
-$ cd simple-landing-page
-$ sudo npm -g install grunt-cli karma bower
-$ npm install
-$ bower install
-$ grunt watch
-```
+***
 
+## Quick Start

@@ -7,15 +7,33 @@
 (function(module) {
 
     module.config(function ($stateProvider) {
-        $stateProvider.state('home', {
-            url: '/home',
+        $stateProvider
+        .state('home', {
+            url: '/projects/:project',
             views: {
                 "main": {
                     controller: 'HomeController as model',
                     templateUrl: 'home/home.tpl.html'
                 }
             },
-            data:{ pageTitle: 'Home' }
+            data:{ pageTitle: 'Home' },
+            resolve: {
+                project: function getProjects($stateParams, $state, EmailService) {
+                    return EmailService
+                            .registerForProject($stateParams.project)
+                            .then(null, function () {
+                                $state.go('404');
+                            });
+                }
+            }
+        })
+        .state('404', {
+            url: '/404',
+            views: {
+                "main": {
+                    templateUrl: 'assets/404.html'
+                }
+            }
         });
     });
 
