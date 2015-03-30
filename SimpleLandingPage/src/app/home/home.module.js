@@ -22,5 +22,6 @@
 // The name of the module, followed by its dependencies (at the bottom to facilitate enclosure)
 }(angular.module("SimpleLandingPage.home", [
     'ui.router',
+    'ngMessages',
     'SimpleLandingPage.service.email'
 ])));
