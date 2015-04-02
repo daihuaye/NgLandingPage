@@ -1,7 +1,7 @@
 (function(app) {
 
     app.config(function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/projects/weekly-tech-news');
     });
 
     app.run(function () {});
