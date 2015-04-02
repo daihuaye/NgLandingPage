@@ -1,20 +1,19 @@
 .nl-landing-page-view {
+  .background-image {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url('images/extendedLandingPageImage.jpg') no-repeat right bottom fixed;
+    .background-size(cover);
+  }
   @bg-color: rgba(72, 72, 72, 0.6);
   line-height: 1.2;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  min-width: 792px;
-  min-height: 700px;
-  background: url('images/extendedLandingPageImage.jpg') no-repeat right bottom fixed;
-  .background-size(cover);
-
   div, img, button {
     vertical-align: top;
   }
   .container {
-    width: 792px;
     padding: 0px;
   }
   .project-icon {
@@ -22,13 +21,11 @@
     margin-left: 7px;
     padding: 17px 17px;
   }
-  .nl-sidebar {
-    display: inline-block;
-  }
   .nl-lp-perks {
     padding: 36px 0px 36px 50px;
     width: 450px;
     color: white;
+    margin: 0 auto;
     background-color: @bg-color;
   }
   .nl-slogan {
@@ -63,11 +60,10 @@
     width: 450px;
     min-height: 125px;
     color: white;
-    position: absolute;
-    margin-top: 17px;
     padding-top: 18px;
     padding-left: 24px;
     background-color: @bg-color;
+    margin: 17px auto 0 auto;
     span {
       .font-style(@font-semibold, 20px);
       display: block;
@@ -75,10 +71,9 @@
     }
     .nl-form-error-msg {
       background-color: rgba(255, 255, 255, 0.45);
-      .font-style(@font-light, 14px);
+      .font-style(@font-light, 14px, #ff3366, bold);
       .size(210px, 22px);
       padding-top: 3px;
-      color: black;
       padding-left: 12px;
       margin: 5px 0 10px 24px;
     }
@@ -106,25 +101,23 @@
     }
   }
   .nl-invited-list {
-    width: 325px;
+    width: 450px;
     min-height: 180px;
-    margin-left: 17px;
-    display: inline-block;
-    background-color: rgba(234, 234, 234, .36);
+    background-color: @bg-color;
     padding-top: 14px;
     padding-left: 21px;
     padding-bottom: 12px;
-    margin-top: 136px;
     overflow-x: hidden;
+    margin: 17px auto 50px auto;
   }
   .nl-invited-title {
     display: block;
-    .font-style(@font-regular, 20px, rgb(254, 254, 254));
+    .font-style(@font-regular, 20px, white);
     margin-bottom: 18px;
   }
   .nl-invited-emails {
     display: block;
-    .font-style(@font-regular, 14px, rgb(253, 253, 253));
+    .font-style(@font-regular, 14px, white);
     margin-bottom: 4px;
   }
   .nl-success-register {
