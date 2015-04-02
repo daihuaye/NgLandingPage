@@ -9,8 +9,8 @@
     app.controller('AppController', function ($scope) {
     });
 
-}(angular.module("SimpleLandingPage", [
-    'SimpleLandingPage.home',
+}(angular.module("NgLandingPage", [
+    'NgLandingPage.home',
     'templates-app',
     'templates-common',
     'ui.router.state',

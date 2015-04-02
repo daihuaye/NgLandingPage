@@ -52,4 +52,4 @@
         }
     });
 
-}(angular.module("SimpleLandingPage.home")));
+}(angular.module("NgLandingPage.home")));

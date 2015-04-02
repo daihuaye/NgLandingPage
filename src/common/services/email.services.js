@@ -1,7 +1,7 @@
 (function(module) {
 
     module.factory('EmailService', function ($q) {
-        var firebaseDB = new Firebase('https://simplelandingpage.firebaseio.com/');
+        var firebaseDB = new Firebase('https://SimpleLandingPage.firebaseio.com/');
 
         return {
             register: register,
@@ -42,4 +42,4 @@
     });
 
 // The name of the module, followed by its dependencies (at the bottom to facilitate enclosure)
-}(angular.module("SimpleLandingPage.service.email", [])));
+}(angular.module("NgLandingPage.service.email", [])));

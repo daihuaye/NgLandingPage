@@ -38,9 +38,9 @@
     });
 
 // The name of the module, followed by its dependencies (at the bottom to facilitate enclosure)
-}(angular.module("SimpleLandingPage.home", [
+}(angular.module("NgLandingPage.home", [
     'ui.router',
     'ngMessages',
-    'SimpleLandingPage.service.email',
+    'NgLandingPage.service.email',
     'Directive.NotFound'
 ])));

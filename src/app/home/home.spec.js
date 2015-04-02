@@ -5,7 +5,7 @@
  * automatically.
  */
 describe('home section', function () {
-    beforeEach(module('SimpleLandingPage.home'));
+    beforeEach(module('NgLandingPage.home'));
 
     it('should have a dummy test', inject(function() {
         expect(true).toBeTruthy();
