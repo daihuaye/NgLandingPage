@@ -41,5 +41,6 @@
 }(angular.module("SimpleLandingPage.home", [
     'ui.router',
     'ngMessages',
-    'SimpleLandingPage.service.email'
+    'SimpleLandingPage.service.email',
+    'Directive.NotFound'
 ])));
