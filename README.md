@@ -1,6 +1,6 @@
 # Ng landing page
 
-A simple landing page with asking user to enter their emails and show their name on the joined list. The backend is using firebase, a simple and easy No SQL data storage server. The application is built on top of angular JS. 
+A simple landing page with asking user to enter their emails and show their names on the joined list. The backend is using firebase, a simple and easy No SQL data storage server. The application is built on top of angular JS. 
 
 ## Quick Start
 ```shell
