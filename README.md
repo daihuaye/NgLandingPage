@@ -6,7 +6,7 @@ A simple landing page with asking user to enter their emails and show their name
 1. The landing page can be extends to mutiple projects.
 2. Easly modify web content by modifying data
 
-## Data Structure for the example: ```Weekly Tech News```
+##### Data Structure for the example: ```Weekly Tech News```
 ![Weekly Teach News Data](https://s3.amazonaws.com/ngtetrisresource/weeklyNewsData.png)
 
 
